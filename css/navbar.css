@@ -10,11 +10,12 @@
   box-shadow: 0 0 0 0;
 }
 
-.nav-item {
+.nav-item:not(:first-child) {
   display: flex;
   align-items: center;
   transition: all .2s ease-out;
   border-radius: 0.8rem;
+  cursor: pointer;
 }
 
 .nav-item h5 { cursor: pointer }
@@ -26,20 +27,25 @@
   border-bottom: 2px solid #fff;
 }
 
+#user {
+  cursor: default;
+}
+
 @media (max-width: 575.98px) { }
 
 @media (max-width: 767.98px) { }
 
 @media (max-width: 991.98px) {
   
-.nav-item:hover {
+.nav-item:hover:not(:first-child) {
   background-color: rgba(255, 255, 255, .8);
 }
-  .nav-item:hover .nav-link{
-    color: rgba(0, 0, 0, 0.8);
-    font-weight: 700;
-  }
- }
+
+.nav-item:hover .nav-link{
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 700;
+}
+}
 
 @media (max-width: 1199.98px) {  }
 
