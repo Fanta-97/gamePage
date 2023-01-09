@@ -1,0 +1,7 @@
+
+.hover-link { transition: all .9s ease; }
+.hover-link:hover * { color: rgb(111, 109, 109)!important; }
+
+footer .navbar-nav {
+  font-size: 12px;
+}
