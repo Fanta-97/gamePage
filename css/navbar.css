@@ -1,0 +1,52 @@
+.navbar-dark .navbar-toggler{
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  transition: all .3s ease-out;
+  border: none
+}
+
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: 0 0 0 0;
+}
+
+.nav-item:not(:first-child) {
+  display: flex;
+  align-items: center;
+  transition: all .2s ease-out;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+
+.nav-item h5 { cursor: pointer }
+
+.navbar-brand {
+  transition: all .5s ease-out;
+}
+.navbar-brand:hover {
+  border-bottom: 2px solid #fff;
+}
+
+#user {
+  cursor: default;
+}
+
+@media (max-width: 575.98px) { }
+
+@media (max-width: 767.98px) { }
+
+@media (max-width: 991.98px) {
+  
+.nav-item:hover:not(:first-child) {
+  background-color: rgba(255, 255, 255, .8);
+}
+
+.nav-item:hover .nav-link{
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 700;
+}
+}
+
+@media (max-width: 1199.98px) {  }
+
+@media (max-width: 1399.98px) {  }
