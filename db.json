@@ -1,6 +1,6 @@
 {
   "users": [{
-    "usserName": "Lionel Messi",
+    "name": "Lionel Messi",
     "email": "soporteRollingGames@gmail.com",
     "password": "ADMINadmin1234*",
     "rol": "admin"

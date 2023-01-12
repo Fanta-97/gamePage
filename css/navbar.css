@@ -10,15 +10,13 @@
   box-shadow: 0 0 0 0;
 }
 
-.nav-item:not(:first-child) {
+.nav-item{
   display: flex;
   align-items: center;
   transition: all .2s ease-out;
   border-radius: 0.8rem;
   cursor: pointer;
 }
-
-.nav-item h5 { cursor: pointer }
 
 .navbar-brand {
   transition: all .5s ease-out;
@@ -27,8 +25,8 @@
   border-bottom: 2px solid #fff;
 }
 
-#user {
-  cursor: default;
+.navbar-collapse .btn {
+  --bs-btn-border-radius: 0;
 }
 
 @media (max-width: 575.98px) { }
@@ -37,14 +35,21 @@
 
 @media (max-width: 991.98px) {
   
-.nav-item:hover:not(:first-child) {
-  background-color: rgba(255, 255, 255, .8);
-}
+  .nav-item:hover { background-color: rgba(255, 255, 255, .8); }
 
-.nav-item:hover .nav-link{
-  color: rgba(0, 0, 0, 0.8);
-  font-weight: 700;
-}
+  .nav-item:hover .nav-link{
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 700;
+  }
+
+  .navbar-collapse a {
+    display: block;
+    margin: auto;
+  }
+  .navbar-collapse .btn {
+    width: 40%;
+    min-width: 40px;
+  }
 }
 
 @media (max-width: 1199.98px) {  }
