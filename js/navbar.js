@@ -1,24 +1,33 @@
 const user = document.getElementById('user')
 const btnLogin = document.getElementById('login')
+const btnAdmin = document.getElementById('admin')
+
+
 
 btnLogin.addEventListener("click", () => {
-  console.log(btnLogin.textContent)
+  let userLogged = getUser()
   if(btnLogin.textContent === "Logout") {
     user.classList.toggle('d-none')
-    localStorage.clear()
+    localStorage.removeItem('user')
     btnLogin.textContent = "Login"
+    if(isAdmin(userLogged.rol)) btnAdmin.classList.toggle('d-none')
   }
   else window.open("../pages/login.html", "_self");  
-    
 })
 
-const mostrarUsuario = () => {
-  let userLogged = JSON.parse(localStorage.getItem('user'))
-  console.log(userLogged)
-  if(userLogged !== null) {
-    user.textContent = `Bienvenido/a   ${userLogged.usserName}`
+const isAdmin = rol => rol === "admin"
+
+const getUser = () => JSON.parse(localStorage.getItem('user'))
+
+const showUser = () => {
+  let userLogged = getUser()
+  
+  if(userLogged) {
+    const {name, rol} = userLogged
+    user.textContent = `Hi @${name}`
     user.classList.toggle('d-none')
     btnLogin.textContent = "Logout"
+    if(isAdmin(rol)) btnAdmin.classList.toggle('d-none') 
   }
 }
-mostrarUsuario()
+showUser()
