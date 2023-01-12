@@ -33,12 +33,12 @@ const saveUser = user => localStorage.setItem('user', JSON.stringify(user))
 const login = async() => {
   const email = document.getElementById('email').value
   const password = document.getElementById('password').value
+
   const users = await getUsers()
-
-  const user = users.find(user => user.emil === email && user.password === email.password)
-
-  if(user === undefined) return alert('EL USUARIO QUE DESEA INGRESAR NO ESTA REGISTRADO')
-  saveUser(user)
-  window.open(window.open("../pages/index.html", "_self"))
+  const userLogged = users.find(user => user.email === email && user.password === password)
+  
+  if(userLogged === undefined) return alert('EL USUARIO QUE DESEA INGRESAR NO ESTA REGISTRADO')
+  saveUser(userLogged)
+  window.open(window.open("../index.html", "_self"))
 
 }
